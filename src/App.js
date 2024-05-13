@@ -1,5 +1,6 @@
 import Input from "./Input";
 import Square from "./Square";
+import Header from "./Header";
 import { useState } from "react";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
 
     return (
         <div className="App">
+            <Header title="Color Box" />
             <Square
                 colorValue={colorValue}
                 hexValue={hexValue}

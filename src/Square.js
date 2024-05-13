@@ -1,13 +1,17 @@
+import colorNames from "colornames";
+
 const Square = ({ colorValue, hexValue, isDarkText }) => {
+    const isValidColor = hexValue !== undefined;
+
     return (
         <section
             className="square"
             style={{
-                backgroundColor: colorValue,
+                backgroundColor: isValidColor ? colorValue : "#fff",
                 color: isDarkText ? "#000" : "#fff",
             }}
         >
-            <p>{colorValue ? colorValue : "Color Box"}</p>
+            <p>{colorValue ? colorValue : "🎨"}</p>
             <p>{hexValue ? hexValue : null}</p>
         </section>
     );
