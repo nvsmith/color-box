@@ -11,13 +11,22 @@ const ColorList = () => {
     return (
         <div>
             <h2>List of Color Names</h2>
-            <ul>
-                {colorList.map((color, index) => (
-                    <li key={index}>
-                        {color.name}: {color.value}
-                    </li>
-                ))}
-            </ul>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Color Name</th>
+                        <th>Hex Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {colorList.map((color, index) => (
+                        <tr key={index}>
+                            <td className="col--left">{color.name}</td>
+                            <td className="col--right">{color.value}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     );
 };
