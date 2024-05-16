@@ -2,6 +2,7 @@ import Input from "./Input";
 import Square from "./Square";
 import Header from "./Header";
 import { useState } from "react";
+import ColorList from "./ColorList";
 
 function App() {
     const [colorValue, setColorValue] = useState("");
@@ -23,6 +24,7 @@ function App() {
                 isDarkText={isDarkText}
                 setIsDarkText={setIsDarkText}
             />
+            <ColorList />
         </div>
     );
 }
