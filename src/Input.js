@@ -1,4 +1,4 @@
-import colorNames from "colornames";
+import colornames from "colornames";
 
 const Input = ({
     colorValue,
@@ -7,7 +7,6 @@ const Input = ({
     isDarkText,
     setIsDarkText,
 }) => {
-    console.log(`colorNames: `, colorNames.all());
     return (
         <form onSubmit={(e) => e.preventDefault()}>
             <label htmlFor="">Add Color Name</label>
@@ -21,7 +20,7 @@ const Input = ({
                     const inputColor = e.target.value.toLowerCase(); // Convert to lowercase for consistent lookup
                     setColorValue(inputColor);
                     // Gets HEX code for a name from colornames API.
-                    const colorHex = colorNames(inputColor);
+                    const colorHex = colornames(inputColor);
                     setHexValue(colorHex);
                 }}
             />

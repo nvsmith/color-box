@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import colorNames from "colornames";
+import colornames from "colornames";
 
 const ColorList = () => {
     const [colorList, setColorList] = useState([]);
 
     useEffect(() => {
-        setColorList(colorNames.all());
+        setColorList(colornames.all());
     }, []);
 
     return (

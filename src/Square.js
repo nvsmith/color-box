@@ -1,5 +1,3 @@
-// import colorNames from "colornames";
-
 const Square = ({ colorValue, hexValue, isDarkText }) => {
     // Checks that hexValue is not undefined
     const isValidColor = hexValue !== undefined;
