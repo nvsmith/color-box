@@ -1,8 +1,7 @@
-import Input from "./Input";
-import Square from "./Square";
 import Header from "./Header";
+import Main from "./Main";
+import Sidebar from "./Sidebar";
 import { useState } from "react";
-import ColorList from "./ColorList";
 
 function App() {
     const [colorValue, setColorValue] = useState("");
@@ -12,19 +11,15 @@ function App() {
     return (
         <div className="App">
             <Header title="Color Box" />
-            <Square
+            <Main
                 colorValue={colorValue}
                 hexValue={hexValue}
                 isDarkText={isDarkText}
-            />
-            <Input
-                colorValue={colorValue}
                 setColorValue={setColorValue}
                 setHexValue={setHexValue}
-                isDarkText={isDarkText}
                 setIsDarkText={setIsDarkText}
             />
-            <ColorList />
+            <Sidebar />
         </div>
     );
 }

@@ -9,7 +9,7 @@ const ColorList = () => {
     }, []);
 
     return (
-        <div>
+        <div className="color-list">
             <h2>List of Color Names</h2>
             <table>
                 <thead>
