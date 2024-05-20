@@ -1,8 +1,7 @@
 import ColorList from "./ColorList";
-
-const Sidebar = () => {
+const Sidebar = ({ isSidebarOpen }) => {
     return (
-        <section className="sidebar">
+        <section className={`sidebar${isSidebarOpen ? "--open" : ""}`}>
             <ColorList />
         </section>
     );

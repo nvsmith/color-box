@@ -8,9 +8,19 @@ const Main = ({
     isDarkText,
     setIsDarkText,
     hexValue,
+    toggleSidebar,
+    isSidebarOpen,
 }) => {
     return (
         <main>
+            <button
+                type="button"
+                onClick={() => {
+                    toggleSidebar();
+                }}
+            >
+                Toggle Siderbar
+            </button>
             <Square
                 colorValue={colorValue}
                 hexValue={hexValue}
