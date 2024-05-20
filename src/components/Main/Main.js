@@ -19,7 +19,7 @@ const Main = ({
                     toggleSidebar();
                 }}
             >
-                Toggle Siderbar
+                {isSidebarOpen ? "Close Sidebar" : "Open Sidebar"}
             </button>
             <Square
                 colorValue={colorValue}

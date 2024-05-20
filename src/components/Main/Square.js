@@ -3,15 +3,30 @@ const Square = ({ colorValue, hexValue, isDarkText }) => {
     const isValidColor = hexValue !== undefined;
 
     return (
-        <section
-            className="square"
-            style={{
-                backgroundColor: isValidColor ? hexValue : "#fff",
-                color: isDarkText ? "#000" : "#fff",
-            }}
-        >
-            <p>{colorValue ? colorValue : "🎨"}</p>
-            <p>{hexValue ? hexValue : null}</p>
+        <section className="display-container">
+            <div
+                className="square"
+                style={{
+                    backgroundColor: isValidColor ? hexValue : "#fff",
+                    // color: isDarkText ? "#000" : "#fff",
+                    color: "#fff",
+                }}
+            >
+                <p>{colorValue ? colorValue : "🎨"}</p>
+                <p>{hexValue ? hexValue : null}</p>
+            </div>
+
+            <div
+                className="square--dark"
+                style={{
+                    backgroundColor: isValidColor ? hexValue : "#000",
+                    // color: isDarkText ? "#000" : "#fff",
+                    color: "#000",
+                }}
+            >
+                <p>{colorValue ? colorValue : "🎨"}</p>
+                <p>{hexValue ? hexValue : null}</p>
+            </div>
         </section>
     );
 };
