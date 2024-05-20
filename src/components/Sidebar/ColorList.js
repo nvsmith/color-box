@@ -10,12 +10,11 @@ const ColorList = () => {
 
     return (
         <div className="color-list">
-            <h2>List of Color Names</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Color Name</th>
-                        <th>Hex Value</th>
+                        <th className="col--left">Color Name</th>
+                        <th className="col--right">Hex Value</th>
                     </tr>
                 </thead>
                 <tbody>
