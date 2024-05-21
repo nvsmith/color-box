@@ -6,7 +6,7 @@ import { useState } from "react";
 function App() {
     const [colorValue, setColorValue] = useState("");
     const [hexValue, setHexValue] = useState("");
-    const [isDarkText, setIsDarkText] = useState(true);
+    // const [isDarkText, setIsDarkText] = useState(true);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     const toggleSidebar = () => {
@@ -22,12 +22,12 @@ function App() {
                 <Main
                     colorValue={colorValue}
                     hexValue={hexValue}
-                    isDarkText={isDarkText}
                     setColorValue={setColorValue}
                     setHexValue={setHexValue}
-                    setIsDarkText={setIsDarkText}
                     toggleSidebar={toggleSidebar}
                     isSidebarOpen={isSidebarOpen}
+                    // isDarkText={isDarkText}
+                    // setIsDarkText={setIsDarkText}
                 />
             </div>
         </div>

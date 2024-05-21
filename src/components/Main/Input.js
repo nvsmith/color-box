@@ -4,17 +4,17 @@ const Input = ({
     colorValue,
     setColorValue,
     setHexValue,
-    isDarkText,
-    setIsDarkText,
+    // isDarkText,
+    // setIsDarkText,
 }) => {
     return (
         <form onSubmit={(e) => e.preventDefault()}>
-            <label htmlFor="">Add Color Name</label>
+            <label htmlFor="">Type Color Name Here</label>
             <input
                 type="text"
                 required
                 autoFocus
-                placeholder="Add Color Name"
+                placeholder="Type Color Name Here"
                 value={colorValue}
                 onChange={(e) => {
                     const inputColor = e.target.value.toLowerCase(); // Convert to lowercase for consistent lookup
@@ -24,9 +24,9 @@ const Input = ({
                     setHexValue(colorHex);
                 }}
             />
-            <button type="button" onClick={() => setIsDarkText(!isDarkText)}>
+            {/* <button type="button" onClick={() => setIsDarkText(!isDarkText)}>
                 Toggle Text Color
-            </button>
+            </button> */}
         </form>
     );
 };

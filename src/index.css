@@ -23,8 +23,9 @@ body {
 }
 
 header {
-    background-color: azure;
     text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
 }
 
 .container {
@@ -47,7 +48,6 @@ header {
 
 main {
     flex: 1;
-    background-color: cadetblue;
     padding: 1rem;
     min-width: 275px;
 }
@@ -129,5 +129,5 @@ li {
 }
 
 table {
-    border: 3px solid green; /* Adjust the border style and color as needed */
+    border: 3px solid green;
 }
