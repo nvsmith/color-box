@@ -44,8 +44,10 @@ header {
 .sidebar--open {
     flex-shrink: 0;
     padding: 0 1rem;
-    border-right: 1px solid #ccc;
+    /* border-right: 1px solid #d7c3ee; */
     overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
 }
 
 main {
@@ -58,7 +60,8 @@ main {
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 2rem;
+    margin: 2rem 0;
+    /* padding: 2rem; */
 }
 
 .square,
@@ -126,13 +129,19 @@ button {
 }
 
 table {
-    border-collapse: collapse;
+    border-collapse: separate;
 }
 
 thead {
     position: sticky;
     top: 0;
-    background-color: #d7c3ee;
     z-index: 1;
     font-size: 1.2rem;
+}
+
+th {
+    border-top: 2px solid #d7c3ee;
+    border-bottom: 2px solid #d7c3ee;
+    padding: 0.5rem;
+    background-color: #fff;
 }
