@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/color-box/static/css/main.6d40e3d4.css",
-    "main.js": "/color-box/static/js/main.a75dc5aa.js",
+    "main.css": "/color-box/static/css/main.659b5254.css",
+    "main.js": "/color-box/static/js/main.e83d33b6.js",
     "index.html": "/color-box/index.html",
-    "main.6d40e3d4.css.map": "/color-box/static/css/main.6d40e3d4.css.map",
-    "main.a75dc5aa.js.map": "/color-box/static/js/main.a75dc5aa.js.map"
+    "main.659b5254.css.map": "/color-box/static/css/main.659b5254.css.map",
+    "main.e83d33b6.js.map": "/color-box/static/js/main.e83d33b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d40e3d4.css",
-    "static/js/main.a75dc5aa.js"
+    "static/css/main.659b5254.css",
+    "static/js/main.e83d33b6.js"
   ]
 }
