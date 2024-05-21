@@ -6,11 +6,7 @@ const Square = ({ colorValue, hexValue, isDarkText }) => {
         <section className="display-container">
             <div
                 className="square"
-                style={{
-                    backgroundColor: isValidColor ? hexValue : "#fff",
-                    // color: isDarkText ? "#000" : "#fff",
-                    color: "#fff",
-                }}
+                style={isValidColor ? { backgroundColor: hexValue } : {}}
             >
                 <p>{colorValue ? colorValue : "🎨"}</p>
                 <p>{hexValue ? hexValue : null}</p>
@@ -18,11 +14,7 @@ const Square = ({ colorValue, hexValue, isDarkText }) => {
 
             <div
                 className="square--dark"
-                style={{
-                    backgroundColor: isValidColor ? hexValue : "#000",
-                    // color: isDarkText ? "#000" : "#fff",
-                    color: "#000",
-                }}
+                style={isValidColor ? { backgroundColor: hexValue } : {}}
             >
                 <p>{colorValue ? colorValue : "🎨"}</p>
                 <p>{hexValue ? hexValue : null}</p>
