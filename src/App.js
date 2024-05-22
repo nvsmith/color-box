@@ -17,7 +17,7 @@ function App() {
     return (
         <div className="App">
             <Header />
-            <div className="container">
+            <div className="content-container">
                 <Sidebar isSidebarOpen={isSidebarOpen} />
                 <Main
                     colorValue={colorValue}

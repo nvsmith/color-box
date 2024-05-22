@@ -14,6 +14,7 @@ const Main = ({
     return (
         <main>
             <button
+                className="toggle-btn"
                 type="button"
                 onClick={() => {
                     toggleSidebar();
