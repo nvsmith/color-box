@@ -76,12 +76,24 @@ main {
 }
 
 .square {
-    background-color: #c8c8c8;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(246, 248, 145, 1) 50%,
+        rgba(180, 252, 251, 1) 100%
+    );
     color: #000;
 }
 
 .square--dark {
-    background-color: #333;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        0deg,
+        rgba(11, 110, 174, 1) 0%,
+        rgba(102, 5, 136, 1) 50%,
+        rgba(0, 0, 0, 1) 100%
+    );
     color: #fff;
 }
 

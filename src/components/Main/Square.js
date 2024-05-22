@@ -6,17 +6,17 @@ const Square = ({ colorValue, hexValue, isDarkText }) => {
         <section className="display-container">
             <div
                 className="square"
-                style={isValidColor ? { backgroundColor: hexValue } : {}}
+                style={isValidColor ? { background: hexValue } : {}}
             >
-                <p>{colorValue ? colorValue : "🎨"}</p>
+                <p>{colorValue ? colorValue : ""}</p>
                 <p>{hexValue ? hexValue : null}</p>
             </div>
 
             <div
                 className="square--dark"
-                style={isValidColor ? { backgroundColor: hexValue } : {}}
+                style={isValidColor ? { background: hexValue } : {}}
             >
-                <p>{colorValue ? colorValue : "🎨"}</p>
+                <p>{colorValue ? colorValue : ""}</p>
                 <p>{hexValue ? hexValue : null}</p>
             </div>
         </section>
