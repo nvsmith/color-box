@@ -1,3 +1,5 @@
+import { FaSun, FaMoon } from "react-icons/fa";
+
 const Square = ({ colorValue, hexValue, isDarkText }) => {
     // Checks that hexValue is not undefined
     const isValidColor = hexValue !== undefined;
@@ -8,7 +10,7 @@ const Square = ({ colorValue, hexValue, isDarkText }) => {
                 className="square"
                 style={isValidColor ? { background: hexValue } : {}}
             >
-                <p>{colorValue ? colorValue : ""}</p>
+                <p>{colorValue ? colorValue : <FaSun className="icon" />}</p>
                 <p>{hexValue ? hexValue : null}</p>
             </div>
 
@@ -16,7 +18,7 @@ const Square = ({ colorValue, hexValue, isDarkText }) => {
                 className="square--dark"
                 style={isValidColor ? { background: hexValue } : {}}
             >
-                <p>{colorValue ? colorValue : ""}</p>
+                <p>{colorValue ? colorValue : <FaMoon className="icon" />}</p>
                 <p>{hexValue ? hexValue : null}</p>
             </div>
         </section>
