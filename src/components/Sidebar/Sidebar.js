@@ -1,8 +1,8 @@
-import ColorList from "./ColorList";
-const Sidebar = ({ isSidebarOpen }) => {
+import ColorGrid from "./ColorGrid";
+const Sidebar = ({ isSidebarOpen, colorList }) => {
     return (
         <section className={`sidebar${isSidebarOpen ? "--open" : ""}`}>
-            <ColorList />
+            <ColorGrid colorList={colorList} />
         </section>
     );
 };

@@ -1,16 +1,21 @@
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Main from "./components/Main/Main";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import colornames from "colornames";
 
 function App() {
     const [colorValue, setColorValue] = useState("");
     const [hexValue, setHexValue] = useState("");
-    // const [isDarkText, setIsDarkText] = useState(true);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [colorList, setColorList] = useState([]);
+
+    // Defines colors from the colornames API
+    useEffect(() => {
+        setColorList(colornames.all());
+    }, []);
 
     const toggleSidebar = () => {
-        console.log("button clicked");
         setIsSidebarOpen(!isSidebarOpen);
     };
 
@@ -18,7 +23,7 @@ function App() {
         <div className="App">
             <Header />
             <div className="content-container">
-                <Sidebar isSidebarOpen={isSidebarOpen} />
+                <Sidebar isSidebarOpen={isSidebarOpen} colorList={colorList} />
                 <Main
                     colorValue={colorValue}
                     hexValue={hexValue}
@@ -26,8 +31,6 @@ function App() {
                     setHexValue={setHexValue}
                     toggleSidebar={toggleSidebar}
                     isSidebarOpen={isSidebarOpen}
-                    // isDarkText={isDarkText}
-                    // setIsDarkText={setIsDarkText}
                 />
             </div>
         </div>

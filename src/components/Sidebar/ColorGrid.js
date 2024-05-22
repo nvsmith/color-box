@@ -1,13 +1,4 @@
-import React, { useState, useEffect } from "react";
-import colornames from "colornames";
-
-const ColorList = () => {
-    const [colorList, setColorList] = useState([]);
-
-    useEffect(() => {
-        setColorList(colornames.all());
-    }, []);
-
+const ColorGrid = ({ colorList }) => {
     return (
         <div className="color-list">
             <table>
@@ -34,4 +25,4 @@ const ColorList = () => {
     );
 };
 
-export default ColorList;
+export default ColorGrid;
