@@ -44,7 +44,7 @@ header {
 .sidebar--open {
     flex-shrink: 0;
     padding: 0 1rem;
-    /* border-right: 1px solid #d7c3ee; */
+    /* border-right: 1px solid #5f4ddb; */
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
@@ -112,7 +112,8 @@ input[type="text"] {
     padding: 0.25rem;
     width: 100%;
     font-size: 2rem;
-    box-shadow: 2px 2px 5px #000;
+    box-shadow: 2px 2px 5px gray;
+    border: 2px solid #f2b292;
     border-radius: 0.25rem;
     outline: none;
     text-align: center;
@@ -125,16 +126,16 @@ button {
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    box-shadow: 2px 2px 5px #000;
+    border: 5px solid #f2b292;
     padding: 0.25rem;
-    background-color: #d7c3ee;
+    background-color: #5f4ddb;
     transition: transform 0.5s, background-color 0.5s;
 }
 
 button:hover {
     transform: scale(1.2);
-    background-color: rgb(101, 236, 101);
-    border-color: #d7c3ee;
+    background-color: #65e241;
+    border: 2px solid #5f4ddb;
     cursor: pointer;
 }
 
@@ -161,13 +162,12 @@ thead {
 }
 
 th {
-    border-top: 2px solid #d7c3ee;
-    border-bottom: 2px solid #d7c3ee;
+    border-top: 2px solid #5f4ddb;
+    border-bottom: 2px solid #5f4ddb;
     padding: 0.5rem;
     background-color: #fff;
 }
 
 .icon {
     font-size: 6rem;
-    color: #d7c3ee;
 }

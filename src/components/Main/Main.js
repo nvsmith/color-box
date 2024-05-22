@@ -19,7 +19,7 @@ const Main = ({
                     toggleSidebar();
                 }}
             >
-                {isSidebarOpen ? "🙈" : "👀"}
+                {isSidebarOpen ? "🙈" : "🎨"}
             </button>
             <Square
                 colorValue={colorValue}
