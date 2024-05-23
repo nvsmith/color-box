@@ -5,25 +5,41 @@ import { useState, useEffect } from "react";
 import colornames from "colornames";
 
 function App() {
+    // *** Manage Main state ***
+
     const [colorValue, setColorValue] = useState("");
     const [hexValue, setHexValue] = useState("");
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+    // *** Manage Sidebar state ***
+
     const [colorList, setColorList] = useState([]);
 
-    // Defines colors from the colornames API
+    // *** Manage side effects ***
+
     useEffect(() => {
+        // Defines colors from the colornames API
         setColorList(colornames.all());
     }, []);
 
+    // *** Manage interactions ***
+
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
+    };
+    const handleColorListSelection = (color) => {
+        console.log(color.name);
     };
 
     return (
         <div className="App">
             <Header />
             <div className="content-container">
-                <Sidebar isSidebarOpen={isSidebarOpen} colorList={colorList} />
+                <Sidebar
+                    isSidebarOpen={isSidebarOpen}
+                    colorList={colorList}
+                    handleColorListSelection={handleColorListSelection}
+                />
                 <Main
                     colorValue={colorValue}
                     hexValue={hexValue}

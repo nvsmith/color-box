@@ -1,4 +1,4 @@
-const ColorGrid = ({ colorList }) => {
+const ColorGrid = ({ colorList, handleColorListSelection }) => {
     return (
         <div className="color-list">
             <table>
@@ -13,7 +13,12 @@ const ColorGrid = ({ colorList }) => {
                         <tr key={index}>
                             {/* <td className="col--left">{color.value}</td> */}
                             <td className="col--right">
-                                <button className="color-list__btn">
+                                <button
+                                    className="color-list__btn"
+                                    onClick={() =>
+                                        handleColorListSelection(color)
+                                    }
+                                >
                                     {color.name}
                                 </button>
                             </td>

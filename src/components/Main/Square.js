@@ -1,6 +1,6 @@
 import { FaSun, FaMoon } from "react-icons/fa";
 
-const Square = ({ colorValue, hexValue, isDarkText }) => {
+const Square = ({ colorValue, hexValue }) => {
     // Checks that hexValue is not undefined
     const isValidColor = hexValue !== undefined;
 
