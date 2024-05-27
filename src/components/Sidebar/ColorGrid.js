@@ -1,4 +1,8 @@
-const ColorGrid = ({ colorList, handleColorListSelection }) => {
+const ColorGrid = ({
+    colorList,
+    handleColorListSelection,
+    handleClearInput,
+}) => {
     return (
         <div className="color-list">
             <table>
@@ -15,9 +19,10 @@ const ColorGrid = ({ colorList, handleColorListSelection }) => {
                             <td className="col--right">
                                 <button
                                     className="color-list__btn"
-                                    onClick={() =>
-                                        handleColorListSelection(color)
-                                    }
+                                    onClick={() => {
+                                        handleColorListSelection(color);
+                                        handleClearInput();
+                                    }}
                                 >
                                     {color.name}
                                 </button>

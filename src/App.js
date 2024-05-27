@@ -31,6 +31,11 @@ function App() {
         console.log(color.name);
     };
 
+    const handleClearInput = () => {
+        setColorValue("");
+        setHexValue("");
+    };
+
     return (
         <div className="App">
             <Header />
@@ -39,11 +44,12 @@ function App() {
                     isSidebarOpen={isSidebarOpen}
                     colorList={colorList}
                     handleColorListSelection={handleColorListSelection}
+                    handleClearInput={handleClearInput}
                 />
                 <Main
                     colorValue={colorValue}
-                    hexValue={hexValue}
                     setColorValue={setColorValue}
+                    hexValue={hexValue}
                     setHexValue={setHexValue}
                     toggleSidebar={toggleSidebar}
                     isSidebarOpen={isSidebarOpen}
