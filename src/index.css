@@ -55,33 +55,22 @@ header {
     scrollbar-color: transparent transparent;
 }
 
-.col--left {
-    /* text-align: right; */
-    padding-right: 0.25rem;
-    display: none;
-}
+/*** Color List Styles ***/
 
-.col--right {
-    /* padding-left: 0.25rem; */
-    text-align: center;
-}
-
-table {
-    border-collapse: separate;
-}
-
-thead {
+h3 {
     position: sticky;
     top: 0;
     z-index: 1;
     font-size: 1.2rem;
-}
-
-th {
     border-top: 2px solid #5f4ddb;
     border-bottom: 2px solid #5f4ddb;
     padding: 0.5rem;
     background-color: #fff;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
 }
 
 .color-list__btn {

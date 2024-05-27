@@ -1,4 +1,3 @@
-import ColorGrid from "./ColorGrid";
 const Sidebar = ({
     isSidebarOpen,
     colorList,
@@ -7,11 +6,24 @@ const Sidebar = ({
 }) => {
     return (
         <section className={`sidebar${isSidebarOpen ? "--open" : ""}`}>
-            <ColorGrid
-                colorList={colorList}
-                handleColorListSelection={handleColorListSelection}
-                handleClearInput={handleClearInput}
-            />
+            <div className="color-list">
+                <h3>Color List</h3>
+                <ul>
+                    {colorList.map((color, index) => (
+                        <li key={index}>
+                            <button
+                                className="color-list__btn"
+                                onClick={() => {
+                                    handleColorListSelection(color);
+                                    handleClearInput();
+                                }}
+                            >
+                                {color.name}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </section>
     );
 };
