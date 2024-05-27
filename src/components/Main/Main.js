@@ -10,6 +10,7 @@ const Main = ({
     hexValue,
     toggleSidebar,
     isSidebarOpen,
+    selectedColorName,
 }) => {
     return (
         <main>
@@ -33,6 +34,7 @@ const Main = ({
                 setHexValue={setHexValue}
                 isDarkText={isDarkText}
                 setIsDarkText={setIsDarkText}
+                selectedColorName={selectedColorName}
             />
         </main>
     );

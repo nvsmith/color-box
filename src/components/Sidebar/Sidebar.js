@@ -14,8 +14,8 @@ const Sidebar = ({
                             <button
                                 className="color-list__btn"
                                 onClick={() => {
-                                    handleColorListSelection(color);
                                     handleClearInput();
+                                    handleColorListSelection(color);
                                 }}
                             >
                                 {color.name}

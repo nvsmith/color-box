@@ -14,6 +14,7 @@ function App() {
     // *** Manage Sidebar state ***
 
     const [colorList, setColorList] = useState([]);
+    const [selectedColorName, setSelectedColorName] = useState("");
 
     // *** Manage side effects ***
 
@@ -28,7 +29,7 @@ function App() {
         setIsSidebarOpen(!isSidebarOpen);
     };
     const handleColorListSelection = (color) => {
-        console.log(color.name);
+        setSelectedColorName(color.name);
     };
 
     const handleClearInput = () => {
@@ -53,6 +54,7 @@ function App() {
                     setHexValue={setHexValue}
                     toggleSidebar={toggleSidebar}
                     isSidebarOpen={isSidebarOpen}
+                    selectedColorName={selectedColorName}
                 />
             </div>
         </div>
