@@ -12,6 +12,7 @@ const Main = ({
     isSidebarOpen,
     selectedColorName,
     setSelectedColorName,
+    handleColorChange,
 }) => {
     return (
         <main>
@@ -37,6 +38,7 @@ const Main = ({
                 setIsDarkText={setIsDarkText}
                 selectedColorName={selectedColorName}
                 setSelectedColorName={setSelectedColorName}
+                handleColorChange={handleColorChange}
             />
         </main>
     );

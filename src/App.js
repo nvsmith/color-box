@@ -5,36 +5,50 @@ import { useState, useEffect } from "react";
 import colornames from "colornames";
 
 function App() {
-    // *** Manage Main state ***
+    // *** Main State ***
 
     const [colorValue, setColorValue] = useState("");
     const [hexValue, setHexValue] = useState("");
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-    // *** Manage Sidebar state ***
+    // *** Sidebar State ***
 
     const [colorList, setColorList] = useState([]);
     const [selectedColorName, setSelectedColorName] = useState("");
 
-    // *** Manage side effects ***
+    // *** Side Effects ***
 
     useEffect(() => {
         // Defines colors from the colornames API
         setColorList(colornames.all());
     }, []);
 
-    // *** Manage interactions ***
+    useEffect(() => {
+        // Updates the input field when user clicks a button from the Sidebar's color list
+        if (selectedColorName) {
+            handleColorChange(selectedColorName);
+        }
+    }, [selectedColorName]);
+
+    // *** Interactions ***
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
+
+    // Passes clicked sidebar color to Main display
     const handleColorListSelection = (color) => {
         setSelectedColorName(color.name);
     };
 
-    const handleClearInput = () => {
-        setColorValue("");
-        setHexValue("");
+    // Updates displayed color based on user input or clicked color
+    const handleColorChange = (inputColor) => {
+        const lowerCaseColor = inputColor.toLowerCase();
+        setColorValue(lowerCaseColor);
+
+        // Gets HEX code that matches the name from the colornames API
+        const colorHex = colornames(lowerCaseColor);
+        setHexValue(colorHex);
     };
 
     return (
@@ -45,7 +59,6 @@ function App() {
                     isSidebarOpen={isSidebarOpen}
                     colorList={colorList}
                     handleColorListSelection={handleColorListSelection}
-                    handleClearInput={handleClearInput}
                 />
                 <Main
                     colorValue={colorValue}
@@ -56,6 +69,7 @@ function App() {
                     isSidebarOpen={isSidebarOpen}
                     selectedColorName={selectedColorName}
                     setSelectedColorName={setSelectedColorName}
+                    handleColorChange={handleColorChange}
                 />
             </div>
         </div>

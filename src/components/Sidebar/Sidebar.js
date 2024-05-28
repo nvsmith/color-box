@@ -1,9 +1,4 @@
-const Sidebar = ({
-    isSidebarOpen,
-    colorList,
-    handleColorListSelection,
-    handleClearInput,
-}) => {
+const Sidebar = ({ isSidebarOpen, colorList, handleColorListSelection }) => {
     return (
         <section className={`sidebar${isSidebarOpen ? "--open" : ""}`}>
             <div className="color-list">
@@ -14,7 +9,6 @@ const Sidebar = ({
                             <button
                                 className="color-list__btn"
                                 onClick={() => {
-                                    handleClearInput();
                                     handleColorListSelection(color);
                                 }}
                             >
