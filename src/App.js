@@ -55,6 +55,7 @@ function App() {
                     toggleSidebar={toggleSidebar}
                     isSidebarOpen={isSidebarOpen}
                     selectedColorName={selectedColorName}
+                    setSelectedColorName={setSelectedColorName}
                 />
             </div>
         </div>

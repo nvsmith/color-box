@@ -11,6 +11,7 @@ const Main = ({
     toggleSidebar,
     isSidebarOpen,
     selectedColorName,
+    setSelectedColorName,
 }) => {
     return (
         <main>
@@ -35,6 +36,7 @@ const Main = ({
                 isDarkText={isDarkText}
                 setIsDarkText={setIsDarkText}
                 selectedColorName={selectedColorName}
+                setSelectedColorName={setSelectedColorName}
             />
         </main>
     );
