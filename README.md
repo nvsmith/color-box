@@ -1,5 +1,7 @@
-NEW README
 <a id="readme-top"></a>
+
+# Color Box
+
 <a href="https://tecnate.dev" target="_blank" rel="author">Tecnate</a> | Last Updated: 2024.05.29
 
 <!-- TABLE OF CONTENTS -->
